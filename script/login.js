@@ -21,5 +21,5 @@ document.getElementById("login-btn").addEventListener("click", function (event) 
     } else {
         alert('pls enter a valid account number');
     }
-    console.log('hello ');
+    
 })
