@@ -14,53 +14,57 @@
     <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
 
         <header>
-            <nav class="flex justify-around items-center">
-                <img class="w-16" src="./assets/Group.png" alt="logo-2">
-                <div>
-                    <h1 class="text-3xl font-bold">$ <span id="main-balance">3000</span></h1>
-                    <p class="border rounded p-1"> Available Balance</p>
+            <nav class="flex justify-between items-center px-2">
+                <div class="flex items-center gap-2 ">
+                    <img class="w-16" src="./assets/Group.png" alt="logo-2">
+                    <div>
+                        <p class=" text-gray-600 rounded text-[.9rem] "> Available Balance</p>
+                        <h1 class="text-2xl font-semibold">$ <span id="main-balance">3000</span></h1>
+                        
+                    </div>
                 </div>
-                <button class="btn">Logout</button>
+                <button id="logout-btn" class="btn bg-blue-500 text-white rounded-md hover:bg-blue-700">Logout</button>
             </nav>
             <section class="mt-10">
                 <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
-                <p>Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
+                <p class="pl-2 text-gray-700">Enjoy easy and convenient financial services with us. <br> Cashout charge
+                    is low and </p>
 
 
                 <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
                     <!-- add money -->
                     <div id="add-money-box" class="box border cursor-pointer p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="Wallet">
-                        <h3>Add Money</h3>
+                        <h3 class="text-gray-600 text-sm">Add Money</h3>
                     </div>
                     <!-- cash out -->
                     <div id="cashout-box" class="box border cursor-pointer p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/send1.png" alt="Wallet">
-                        <h3>Cashout</h3>
+                        <h3 class="text-gray-600 text-sm">Cashout</h3>
                     </div>
                     <!-- bonus -->
                     <div class="box border cursor-pointer p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/bonus1.png" alt="Wallet">
-                        <h3>Get Bonus</h3>
+                        <h3 class="text-gray-600 text-sm">Get Bonus</h3>
                     </div>
                     <!-- transfer money -->
                     <div class="box border cursor-pointer p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/money1.png" alt="Wallet">
-                        <h3>Transfer Money</h3>
+                        <h3 class="text-gray-600 text-sm">Transfer Money</h3>
                     </div>
                     <!-- pay bill -->
                     <div class="box border cursor-pointer p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/purse1.png" alt="Wallet">
-                        <h3>Pay Bill</h3>
+                        <h3 class="text-gray-600 text-sm">Pay Bill</h3>
                     </div>
                     <!-- transaction -->
-                    <div class="box border cursor-pointer p-4 text-center rounded-sm">
+                    <div id="transaction-box" class="box border cursor-pointer p-4 text-center rounded-sm">
                         <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="Wallet">
-                        <h3>Transactions</h3>
+                        <h3 class="text-gray-600 text-sm">Transactions</h3>
                     </div>
                 </div>
-                <section id="add-money">
-                    <h2>Add Money</h2>
+                <section id="add-money" class="mt-4">
+                    <h2 class="text-center font-bold text-2xl text-blue-700">Add Money</h2>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
 
@@ -75,14 +79,19 @@
                                         <option value="Rocket">Rocket</option>
                                     </select>
                                     <fieldset class="fieldset">
-                                        <label class="fieldset-label">Account Number</label>
-                                        <input id="Account-number" value="01310991224" type="number" class="input" placeholder="Enter Account Number" required />
+                                        <label class="fieldset-label">Bank Account Number</label>
+                                        <input id="Account-number" value="01300000000" type="number" class="input"
+                                            placeholder="Enter 11 digit number" required />
                                         <label class="fieldset-label">Input Amount</label>
-                                        <input id="amount" value="" type="number" class="input" placeholder="Enter Amount" required />
+                                        <input id="amount" value="" type="number" class="input"
+                                            placeholder="Enter Amount" required />
                                         <label class="fieldset-label">PIN</label>
-                                        <input value="1234" id="pin-number" type="text" class="input" placeholder="Enter PIN" required />
-                                        <div><a class="link link-hover">Forgot password?</a></div>
-                                        <button id="add-money-btn" type="submit" id="login-btn" class="btn bg-blue-700 border-none btn-neutral mt-4">Add Money</button>
+                                        <input value="1234" id="pin-number" type="password" class="input"
+                                            placeholder="Enter PIN" required />
+
+                                        <button id="add-money-btn" type="submit" id="login-btn"
+                                            class="btn bg-blue-700 text-xl border-none btn-neutral mt-4">Add
+                                            Money</button>
                                     </fieldset>
                                 </div>
                             </div>
@@ -91,28 +100,43 @@
 
                 </section>
 
-                <section id="cashout">
-                    <h2>CashOut</h2>
+                <section id="cashout" class="mt-4">
+                    <h2 class="text-center font-bold text-2xl text-blue-700">CashOut</h2>
                     <div class="">
                         <div class="hero-content flex-col lg:flex-row-reverse">
 
                             <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
 
                                 <div class="card-body">
-                                   
+
                                     <fieldset class="fieldset">
-                                        <label class="fieldset-label">Account Number</label>
-                                        <input id="Account-number" value="01310991224" type="number" class="input" placeholder="Enter Account Number" required />
+                                        <label class="fieldset-label">Agent Number</label>
+                                        <input id="c-account-number" value="" type="number" class="input"
+                                            placeholder="Enter Agent Account Number" required />
                                         <label class="fieldset-label">Input Amount</label>
-                                        <input id="cashout-amount" value="" type="number" class="input" placeholder="Enter Amount" required />
+                                        <input id="cashout-amount" value="" type="number" class="input"
+                                            placeholder="Enter Amount" required />
                                         <label class="fieldset-label">PIN</label>
-                                        <input value="1234" id="cashout-pin-number" type="text" class="input" placeholder="Enter PIN" required />
-                                        <div><a class="link link-hover">Forgot password?</a></div>
-                                        <button id="cashout-btn" type="submit" id="login-btn" class="btn bg-blue-700 border-none btn-neutral mt-4">CashOut</button>
+                                        <input value="1234" id="c-pin-number" type="password" class="input"
+                                            placeholder="Enter PIN" required />
+
+                                        <button id="cashout-btn" type="submit" id="login-btn"
+                                            class="btn bg-blue-700 text-xl border-none btn-neutral mt-4">CashOut</button>
                                     </fieldset>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                </section>
+
+
+                <section id="transaction-history" class="mt-4">
+
+                    <h1 class="text-center font-bold text-2xl text-blue-700">Transactions History</h1>
+
+                    <div id="transaction-container">
+
                     </div>
 
                 </section>
@@ -121,10 +145,18 @@
 
     </section>
 
-    <script src="./script/addMoney.js"></script>
+    <!-- <script src="./script/addMoney.js"></script>
     <script src="./script/toggle.js"></script>
-    <script src="./script/cashout.js"></script>
-   
+    <script src="./script/cashout.js"></script> -->
+
+    <script src="./utilities/utilities.js"></script>
+    <script src="./script/moneyadd.js"></script>
+    <script src="./script/toggle2.js"></script>
+    <script src="./script/cashout2.js"></script>
+    <script src="./script/transactionHistory.js"></script>
+    <script src="./script/logout.js"></script>
+
+
 </body>
 
 </html>
